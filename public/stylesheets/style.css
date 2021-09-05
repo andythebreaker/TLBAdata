@@ -5,7 +5,34 @@ body {
 a {
   color: #00B7FF; }
 
-.ui.button.ddb98bFill {
-  background: #ddb98b; }
+/*--------------
+ *   Page Headers
+ *   https://semantic-ui.com/stylesheets/docs.css
+ *--------------- */
+.exdoc.masthead.segment {
+  position: relative;
+  z-index: 3;
+  margin: 0em;
+  min-height: 185px;
+  padding: 3em 0em;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: none; }
+
+.exdoc.masthead .introduction {
+  display: block; }
+  .exdoc.masthead .introduction:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+.exdoc.masthead.segment h1 {
+  margin: 0em; }
+
+.exdoc.masthead .advertisement {
+  width: 285px;
+  height: 130px; }
 
 /*# sourceMappingURL=style.css.map */
