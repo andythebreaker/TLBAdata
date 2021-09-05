@@ -1,15 +1,288 @@
 extends layout
 
 block content
-  .ui.large.top.fixed.hidden.menu
-    .ui.container
-      a.active.item Home
-      a.item Work
-      a.item Company
-      a.item Careers
-      .right.menu
-        .item
-          a.ddb98bFill.ui.button Log in
-        .item
-          a.ui.primary.button Sign Up
+  #toc.ui.vertical.inverted.sidebar.menu.left.visible
+    .item
+      a.ui.logo.icon.image(href='/')
+        b UI Docs
+      a(href='/')
+        b UI Docs
+    a.item(href='/introduction/getting-started.html')
+      b Getting Started
+    a.item(href='/introduction/new.html')
+      b New in 2.4
+    .item
+      .header Introduction
+      .menu
+        a.item(href='/introduction/integrations.html')
+          | Integrations
+        a.item(href='/introduction/build-tools.html')
+          | Build Tools
+        a.item(href='/introduction/advanced-usage.html')
+          | Recipes
+        a.item(href='/introduction/glossary.html')
+          | Glossary
+    .item
+      .header Usage
+      .menu
+        a.item(href='/usage/theming.html')
+          | Theming
+        a.item(href='/usage/layout.html')
+          | Layouts
+    .item
+      .header Globals
+      .menu
+        a.item(href='/globals/reset.html')
+          | Reset
+        a.item(href='/globals/site.html')
+          | Site
+    .item
+      .active.header Elements
+      .menu
+        a.item(href='/elements/button.html')
+          | Button
+        a.active.item(href='/elements/container.html')
+          | Container
+        a.item(href='/elements/divider.html')
+          | Divider
+        a.item(href='/elements/flag.html')
+          | Flag
+        a.item(href='/elements/header.html')
+          | Header
+        a.item(href='/elements/icon.html')
+          | Icon
+        a.item(href='/elements/image.html')
+          | Image
+        a.item(href='/elements/input.html')
+          | Input
+        a.item(href='/elements/label.html')
+          | Label
+        a.item(href='/elements/list.html')
+          | List
+        a.item(href='/elements/loader.html')
+          | Loader
+        a.item(href='/elements/placeholder.html')
+          | Placeholder
+        a.item(href='/elements/rail.html')
+          | Rail
+        a.item(href='/elements/reveal.html')
+          | Reveal
+        a.item(href='/elements/segment.html')
+          | Segment
+        a.item(href='/elements/step.html')
+          | Step
+    .item
+      .header Collections
+      .menu
+        a.item(href='/collections/breadcrumb.html')
+          | Breadcrumb
+        a.item(href='/collections/form.html')
+          | Form
+        a.item(href='/collections/grid.html')
+          | Grid
+        a.item(href='/collections/menu.html')
+          | Menu
+        a.item(href='/collections/message.html')
+          | Message
+        a.item(href='/collections/table.html')
+          | Table
+    .item
+      .header Views
+      .menu
+        a.item(href='/views/advertisement.html')
+          | Advertisement
+        a.item(href='/views/card.html')
+          | Card
+        a.item(href='/views/comment.html')
+          | Comment
+        a.item(href='/views/feed.html')
+          | Feed
+        a.item(href='/views/item.html')
+          | Item
+        a.item(href='/views/statistic.html')
+          | Statistic
+    .item
+      .header Modules
+      .menu
+        a.item(href='/modules/accordion.html')
+          | Accordion
+        a.item(href='/modules/checkbox.html')
+          | Checkbox
+        a.item(href='/modules/dimmer.html')
+          | Dimmer
+        a.item(href='/modules/dropdown.html')
+          | Dropdown
+        a.item(href='/modules/embed.html')
+          | Embed
+        a.item(href='/modules/modal.html')
+          | Modal
+        a.item(href='/modules/popup.html')
+          | Popup
+        a.item(href='/modules/progress.html')
+          | Progress
+        a.item(href='/modules/rating.html')
+          | Rating
+        a.item(href='/modules/search.html')
+          | Search
+        a.item(href='/modules/shape.html')
+          | Shape
+        a.item(href='/modules/sidebar.html')
+          | Sidebar
+        a.item(href='/modules/sticky.html')
+          | Sticky
+        a.item(href='/modules/tab.html')
+          | Tab
+        a.item(href='/modules/transition.html')
+          | Transition
+    .item
+      .header Behaviors
+      .menu
+        a.item(href='/behaviors/api.html')
+          | API
+        a.item(href='/behaviors/form.html')
+          | Form Validation
+        a.item(href='/behaviors/visibility.html')
+          | Visibility
+  #toc.ui.vertical.inverted.sidebar.menu.right.visible
+    .item
+      a.ui.logo.icon.image(href='/')
+        b UI Docs
+      a(href='/')
+        b UI Docs
+    a.item(href='/introduction/getting-started.html')
+      b Getting Started
+    a.item(href='/introduction/new.html')
+      b New in 2.4
+    .item
+      .header Introduction
+      .menu
+        a.item(href='/introduction/integrations.html')
+          | Integrations
+        a.item(href='/introduction/build-tools.html')
+          | Build Tools
+        a.item(href='/introduction/advanced-usage.html')
+          | Recipes
+        a.item(href='/introduction/glossary.html')
+          | Glossary
+    .item
+      .header Usage
+      .menu
+        a.item(href='/usage/theming.html')
+          | Theming
+        a.item(href='/usage/layout.html')
+          | Layouts
+    .item
+      .header Globals
+      .menu
+        a.item(href='/globals/reset.html')
+          | Reset
+        a.item(href='/globals/site.html')
+          | Site
+    .item
+      .active.header Elements
+      .menu
+        a.item(href='/elements/button.html')
+          | Button
+        a.active.item(href='/elements/container.html')
+          | Container
+        a.item(href='/elements/divider.html')
+          | Divider
+        a.item(href='/elements/flag.html')
+          | Flag
+        a.item(href='/elements/header.html')
+          | Header
+        a.item(href='/elements/icon.html')
+          | Icon
+        a.item(href='/elements/image.html')
+          | Image
+        a.item(href='/elements/input.html')
+          | Input
+        a.item(href='/elements/label.html')
+          | Label
+        a.item(href='/elements/list.html')
+          | List
+        a.item(href='/elements/loader.html')
+          | Loader
+        a.item(href='/elements/placeholder.html')
+          | Placeholder
+        a.item(href='/elements/rail.html')
+          | Rail
+        a.item(href='/elements/reveal.html')
+          | Reveal
+        a.item(href='/elements/segment.html')
+          | Segment
+        a.item(href='/elements/step.html')
+          | Step
+    .item
+      .header Collections
+      .menu
+        a.item(href='/collections/breadcrumb.html')
+          | Breadcrumb
+        a.item(href='/collections/form.html')
+          | Form
+        a.item(href='/collections/grid.html')
+          | Grid
+        a.item(href='/collections/menu.html')
+          | Menu
+        a.item(href='/collections/message.html')
+          | Message
+        a.item(href='/collections/table.html')
+          | Table
+    .item
+      .header Views
+      .menu
+        a.item(href='/views/advertisement.html')
+          | Advertisement
+        a.item(href='/views/card.html')
+          | Card
+        a.item(href='/views/comment.html')
+          | Comment
+        a.item(href='/views/feed.html')
+          | Feed
+        a.item(href='/views/item.html')
+          | Item
+        a.item(href='/views/statistic.html')
+          | Statistic
+    .item
+      .header Modules
+      .menu
+        a.item(href='/modules/accordion.html')
+          | Accordion
+        a.item(href='/modules/checkbox.html')
+          | Checkbox
+        a.item(href='/modules/dimmer.html')
+          | Dimmer
+        a.item(href='/modules/dropdown.html')
+          | Dropdown
+        a.item(href='/modules/embed.html')
+          | Embed
+        a.item(href='/modules/modal.html')
+          | Modal
+        a.item(href='/modules/popup.html')
+          | Popup
+        a.item(href='/modules/progress.html')
+          | Progress
+        a.item(href='/modules/rating.html')
+          | Rating
+        a.item(href='/modules/search.html')
+          | Search
+        a.item(href='/modules/shape.html')
+          | Shape
+        a.item(href='/modules/sidebar.html')
+          | Sidebar
+        a.item(href='/modules/sticky.html')
+          | Sticky
+        a.item(href='/modules/tab.html')
+          | Tab
+        a.item(href='/modules/transition.html')
+          | Transition
+    .item
+      .header Behaviors
+      .menu
+        a.item(href='/behaviors/api.html')
+          | API
+        a.item(href='/behaviors/form.html')
+          | Form Validation
+        a.item(href='/behaviors/visibility.html')
+          | Visibility
 

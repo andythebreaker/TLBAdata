@@ -23,7 +23,7 @@ app.use(sassMiddleware({
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true,
-  //debug: true
+  debug: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
