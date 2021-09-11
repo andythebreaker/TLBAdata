@@ -15,3 +15,201 @@ block content
         .sub.header.exdoc
           | sub stuff
         .ui.hidden.divider.exdoc
+      #semantic-sponsor
+      .main.ui.intro.container
+    .ui.dividing.right.rail
+      .ui.sticky(style='left: 969.4px;')
+        h4.ui.header Getting started
+        .ui.vertical.following.fluid.accordion.text.menu
+          .item.active
+            a.active.title
+              i.dropdown.icon
+              b Preface
+            .active.content.menu
+              a.item.active(href='#using-build-tools') Using Build Tools
+          .item
+            a.title
+              i.dropdown.icon
+              b Installing
+            .content.menu
+              a.item(href='#install-nodejs') Install NodeJS
+              a.item(href='#install-gulp') Install Gulp
+              a.item(href='#install-semantic-ui') Install Semantic UI
+              a.item(href='#include-in-your-html') Include in Your HTML
+          .item
+            a.title
+              i.dropdown.icon
+              b Updating
+            .content.menu
+              a.item(href='#updating-via-npm') Updating via NPM
+          .item
+            a.title
+              i.dropdown.icon
+              b Next Steps
+            .content.menu
+              a.item(href='#all-set') All Set!
+    h2.ui.dividing.header
+      | Preface
+      a#preface.anchor
+    .no.example
+      h4.ui.header Using Build Tools
+      i.fitted.icon.code
+      a#using-build-tools.anchor
+      p
+        | Semantic UI packaged Gulp build tools so your project can preserve its 
+        a(href='/usage/theming.html') own theme changes
+        | .
+      p
+        | The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.
+      p
+        | For installing with specific integrations like Ember, React, or Meteor, see our 
+        a(href='/introduction/integrations.html') integration guide
+      p
+        | For integrating Semantic UI tasks into your own build tools, or using a CDN see our 
+        a(href='/introduction/advanced-usage.html') recipes
+        |  section.
+    .ui.large.info.message
+      .ui.header Simpler Setup
+      p
+        | If you are using Semantic UI as a dependency and just want to use our default theme, use our lighter 
+        a(href='https://github.com/Semantic-Org/Semantic-UI-CSS' target='_blank')
+          code semantic-ui-css
+        |  or 
+        a(href='https://github.com/Semantic-Org/Semantic-UI-Less' target='_blank')
+          code semantic-ui-less
+        |  repo. If you just need the files you can download them as a zip from GitHub.
+      a.ui.secondary.button(href='https://github.com/Semantic-Org/Semantic-UI-CSS/archive/master.zip') Download Zip
+      a.ui.button(href='https://github.com/Semantic-Org/' target='_blank') View all Semantic-Org Repos 
+    h2.ui.dividing.header
+      | Installing
+      a#installing.anchor
+    .no.example
+      h4.ui.header Install NodeJS
+      i.fitted.icon.code
+      a#install-nodejs.anchor
+      p
+        | If you are unfamiliar with setting up NodeJS you can follow the steps below, or check out the 
+        a(href='https://nodejs.org/download/' target='_blank') download page
+        |  on 
+        a(href='https://www.nodejs.org' target='_blank') nodejs.org
+      .ui.secondary.menu
+        a.active.item(data-tab='mac') Mac
+        a.item(data-tab='linux') Linux
+        a.item(data-tab='win') Windows
+      .ui.active.basic.tab.vertical.segment(data-tab='mac')
+        h4 Option 1: Homebrew
+        p
+          | After installing 
+          a(href='https://brew.sh/' target='_blank') homebrew
+        .ui.existing.segment
+          pre.
+        h4 Option 2: Git
+        .ui.existing.segment
+          pre.
+      .ui.basic.tab.vertical.segment(data-tab='linux')
+        h4 Install via PPA
+        p
+          | Although 
+          a(href='http://www.ubuntuupdates.org/ppa/chris_lea_nodejs' target='_blank') Chris Lea's PPA
+          |  was once the best way to install node, it is now somewhat out of date.
+        p
+          | The recommended path to install Semantic UI is using 
+          a(href='https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager' target='_blank') Joyent's package manager
+          |  guide.
+        h4 Ubuntu
+        .ignored.code(data-type='bash')
+          | curl --silent --location https://deb.nodesource.com/setup_6.x | sudo bash -
+          | sudo apt-get install --yes nodejs
+        h4 Debian
+        .ignored.code(data-type='bash')
+          | apt-get install curl
+          | curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
+          | apt-get install --yes nodejs
+        h4 Red Hat
+        .ignored.code(data-type='bash')
+          | curl --silent --location https://rpm.nodesource.com/setup | bash -
+          | yum -y install nodejs
+      .ui.basic.tab.vertical.segment(data-tab='win')
+        h4 Install the exe
+        p
+          | Download the 
+          a(href='https://nodejs.org/download/') NodeJS executable
+          | .
+    .no.example
+      h4 Install Gulp
+      i.fitted.icon.code
+      a#install-gulp.anchor
+      p
+        | Semantic UI uses 
+        a(href='http://www.gulpjs.com' target='_blank') Gulp
+        |  to provide command line tools for building themed versions of the library with just the components you need.
+      p Gulp is an NPM module and must be installed globally
+      .ui.existing.segment
+        pre.
+    .no.example
+      h4 Install Semantic UI
+      i.fitted.icon.code
+      a#install-semantic-ui.anchor
+      p Semantic UI is available in an eponymous package on NPM
+      .ui.secondary.menu
+        a.active.item(data-tab='video')
+          | Video
+        a.item(data-tab='code')
+          | Code
+      .ui.active.tab(data-tab='video')
+        script#asciicast-22121(type='text/javascript' src='https://asciinema.org/a/22121.js' async='' data-player='[object HTMLDivElement]')
+        #asciicast-container-22121.asciicast(style='display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;')
+          iframe#asciicast-iframe-22121(src='https://asciinema.org/a/22121/embed?' name='asciicast-iframe-22121' scrolling='no' allowfullscreen='true' style='overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 698px; float: none; visibility: visible; height: 482px;')
+      .ui.tab(data-tab='code')
+        .ignored.code(data-type='bash')
+          | npm install semantic-ui --save
+          | cd semantic/
+          | gulp build
+    .no.example
+      h4 Include in Your HTML
+      i.fitted.icon.code
+      a#include-in-your-html.anchor
+      p
+        | Running the gulp build tools will compile CSS and Javascript for use in your project. Just link to these files in your HTML along with the latest 
+        a(href='https://www.jquery.com' target='_blank') jQuery
+        | .
+      .ui.existing.segment
+        pre.
+    h2.ui.dividing.header
+      | Updating
+      a#updating.anchor
+    .no.example
+      h4 Updating via NPM
+      i.fitted.icon.code
+      a#updating-via-npm.anchor
+      p
+        | Semantic's NPM install script will automatically update Semantic UI to the latest version while preserving your site and packaged themes.
+      .ui.existing.segment
+        pre.
+    h2.ui.dividing.header
+      | Next Steps
+      a#next-steps.anchor
+    .no.example
+      h4 All Set!
+      i.fitted.icon.code
+      a#all-set.anchor
+      p Well done! Semantic UI is now ready to be used.
+      .three.column.divided.stackable.center.aligned.ui.grid
+        .column
+          .ui.icon.header
+            i.rocket.circular.icon
+            |           See how to use 
+            a(href='/introduction/build-tools.html') gulp commands
+            |  and build tools
+        .column
+          .ui.icon.header
+            i.theme.circular.icon
+            |           Learn about 
+            a(href='/usage/theming.html') changing themes
+        .column
+          .ui.icon.header
+            i.food.circular.icon
+            |           See 
+            a(href='/introduction/advanced-usage.html') recipes
+            |  for using Semantic UI in your project
+

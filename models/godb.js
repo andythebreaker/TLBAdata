@@ -1,33 +1,25 @@
-const { MongoClient } = require('mongodb');
+//using mongoose to connect mongodb
+var mongoose = require('mongoose');
 const uri = `mongodb+srv://ya4:${process.env.MONGODB_CLOUD_LTBA_PASSWORD}@cluster0.hg0zi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  console.log(collection);
-  client.close();
-});
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //User Schema
-var UserSchema = client.Schema({
-    username: {
-        type: String,
-        index: true
-    },
-    password: {
-        type: String
-    },
-    email: {
-        type: String
-    },
-    name: {
-        type: String
-    },
-    profileimage: {
+var Videolist = mongoose.Schema({
+    streamble: {
         type: String
     }
 });
 
 //export User schema
-var User = module.exports = client.model('User', UserSchema);
+var Videolist = module.exports = mongoose.model('videolist', VideolistSchema);
 
+module.exports.createUser = function (newUser, callback) {
+    //newUser.save(callback); //mongoose function to insert to DB
+    bcrypt.genSalt(10, function (err, salt) {
+        bcrypt.hash(newUser.password, salt, function (err, hash) {
+            // Store hash in your password DB.
+            newUser.password = hash;
+            newUser.save(callback);
+        });
+    });
+};
