@@ -11,7 +11,7 @@ block content
   .pusher
     .ui.masthead.vertical.segment.exdoc(style="background:#ddb98b;")
       .ui.text.container.introduction.exdoc
-        h1 Rail
+        h1 AKB48 Team TP fan-edited short video collection and distribution site (streamable only)
         .sub.header.exdoc
           | sub stuff
         .ui.hidden.divider.exdoc
@@ -53,8 +53,9 @@ block content
       a#preface.anchor
     .no.example
       h4.ui.header Using Build Tools
-      i.fitted.icon.code
-      a#using-build-tools.anchor
+      .ui.action.input
+        input(type='text' placeholder='streamable link')
+        button.ui.button(onclick="$.post('pushVideo', { streamable: event.target.parentElement.getElementsByTagName('input')[0].value || '!error!' }, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") add video
       p
         | Semantic UI packaged Gulp build tools so your project can preserve its 
         a(href='/usage/theming.html') own theme changes
