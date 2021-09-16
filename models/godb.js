@@ -8,6 +8,9 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //User Schema
 var VideolistSchema = mongoose.Schema({
+    index: {
+        type: Number
+    },
     streamable: {
         type: String
     }
@@ -16,6 +19,25 @@ var VideolistSchema = mongoose.Schema({
 //export User schema
 var Videolist = module.exports = mongoose.model('videolist', VideolistSchema); //this name will be the page name of DB?
 
-module.exports.pushVideolist = function (newSchema, callback) {
-    newSchema.save(callback);
+module.exports.pushVideolist = function (var_string_streamable_id, callback) {
+    Videolist.existence(var_string_streamable_id, function (err, gotObj) {
+        console.log(gotObj);
+        if (err) {
+            callback(err);
+        } else if (!gotObj) {
+            var newVideolist = new Videolist({
+                index: 77,
+                streamable: `${var_string_streamable_id}`
+            });
+            newVideolist.save(callback);
+        } else {
+            callback();
+        }
+    });
 };
+
+module.exports.existence = function (streamable_id, callback) {
+    console.log(streamable_id);
+    var query = { streamable: { $eq: streamable_id } };
+    Videolist.findOne(query, callback);
+}

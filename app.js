@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var pushVideoRouter = require('./routes/pushVideo');
+var pointerRouter = require('./routes/pointer');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/pushVideo', pushVideoRouter);
+app.use('/pointer', pointerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

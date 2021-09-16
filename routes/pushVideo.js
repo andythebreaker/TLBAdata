@@ -20,11 +20,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-  var newVideolist = new Videolist({
-    streamable: `${req.body.streamable}`
-  });
-
-  Videolist.pushVideolist(newVideolist, function (err) {
+  Videolist.pushVideolist(req.body.streamable, function (err) {
     if (err) {
       res.send('!error!');
     } else {

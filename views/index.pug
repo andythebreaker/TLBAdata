@@ -53,6 +53,7 @@ block content
       a#preface.anchor
     .no.example
       h4.ui.header Using Build Tools
+      button.ui.primary.button(onclick="$.post('pointer', {}, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") add index
       .ui.action.input
         input(type='text' placeholder='streamable link')
         button.ui.button(onclick="$.post('pushVideo', { streamable: event.target.parentElement.getElementsByTagName('input')[0].value || '!error!' }, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") add video
