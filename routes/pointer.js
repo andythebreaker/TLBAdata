@@ -14,4 +14,20 @@ router.post('/', function (req, res, next) {
     });
 });
 
+router.post('/popIndex', function (req, res, next) {
+    Pointerlist.popIndex(function (respopIndex) {
+        res.send(String(respopIndex));
+    });
+});
+
+router.post('/addEmptyIndex', function (req, res, next) {
+    Pointerlist.pushPointerlist(req.body.tmp, function (err) {
+        if (err) {
+            res.send('!error!');
+        } else {
+            res.send('!ok!');
+        }
+    });
+});
+
 module.exports = router;

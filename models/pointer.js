@@ -21,6 +21,26 @@ module.exports.pushPointerlist = function (var_empty_index, callback) {
     tmpPointerlist.save(callback);
 };
 
+module.exports.delPointerlist = function (var_del_index, callback) {
+    Pointerlist.deleteOne({ index: var_del_index }, function (err) {
+        if (err) {
+            callback(err);
+        } else {
+            callback();
+        }
+    });
+};
+
+module.exports.getEmptyIndex = function (callback) {
+    Pointerlist.find({ "lastpointer": -1 }, function (err, m_set) {
+        if (err || m_set.length === 0) {
+            callback(-1);
+        } else {
+            callback(m_set[0].index);
+        }
+    });
+};
+
 module.exports.setPointer = function (callback) {
     Pointerlist.findOne({ index: { $eq: -1 } }, function (err, gotObj) {
         console.log(gotObj);
@@ -37,6 +57,42 @@ module.exports.setPointer = function (callback) {
             gotObj.lastpointer += 1;
             gotObj.save();
             callback();
+        }
+    });
+};
+
+module.exports.getPointerIndex = function (callback) {
+    Pointerlist.findOne({ index: { $eq: -1 } }, function (err, gotObj) {
+        if (err) {
+            console.log(err);
+            callback(-1);
+        } else {
+            callback(gotObj.lastpointer);
+        }
+    });
+};
+
+module.exports.popIndex = function (callback) {
+    Pointerlist.getEmptyIndex((res) => {
+        if (res === -1) {
+            Pointerlist.setPointer((err) => {
+                if (err) {
+                    callback(-1);
+                } else {
+                    Pointerlist.getPointerIndex((goodindex) => {
+                        callback(goodindex);
+                    });
+                }
+            });
+        } else {
+            Pointerlist.delPointerlist(res, (err) => {
+                if (err) {
+                    console.log(err);
+                    callback(-1);
+                } else {
+                    callback(res);
+                }
+            });
         }
     });
 };

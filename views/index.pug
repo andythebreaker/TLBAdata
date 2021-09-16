@@ -53,7 +53,16 @@ block content
       a#preface.anchor
     .no.example
       h4.ui.header Using Build Tools
-      button.ui.primary.button(onclick="$.post('pointer', {}, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") add index
+      .ui.labeled.button(tabindex='0')
+        .ui.red.button(onclick="$.post('pointer/popIndex', {}, (res) => { event.target.parentElement.getElementsByTagName('a')[0].innerText=res; });")
+          i.heart.icon
+          |  popIndex
+        a.ui.basic.red.left.pointing.label
+          | 1,048
+      button.ui.primary.button(onclick="$.post('pointer', {}, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") update index
+      .ui.action.input
+        input(type='text' placeholder='empty index')
+        button.ui.button(onclick="$.post('pointer/addEmptyIndex', { tmp : event.target.parentElement.getElementsByTagName('input')[0].value || '!error!' }, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") add empty index
       .ui.action.input
         input(type='text' placeholder='streamable link')
         button.ui.button(onclick="$.post('pushVideo', { streamable: event.target.parentElement.getElementsByTagName('input')[0].value || '!error!' }, (res) => { if(res!=='!ok!') event.target.classList.add('red'); });") add video
