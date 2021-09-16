@@ -1,5 +1,10 @@
 var mongoose = require('mongoose');
 
+/*USAGE:
+get a new index to use : call -> popIndex(callbackFUCN(...)=>{...});
+mark any index as empty (aka.: del. action on virtual array) : call -> pushPointerlist(int indexToMark, callbackFUCN(...)=>{...});
+*/
+
 //pointer Schema
 var PointerlistSchema = mongoose.Schema({
     index: {
