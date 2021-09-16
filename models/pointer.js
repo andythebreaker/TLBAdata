@@ -55,8 +55,7 @@ module.exports.setPointer = function (callback) {
         } else {
             console.log(gotObj.lastpointer);
             gotObj.lastpointer += 1;
-            gotObj.save();
-            callback();
+            gotObj.save(callback);
         }
     });
 };
