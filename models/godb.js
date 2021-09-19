@@ -45,3 +45,24 @@ module.exports.existence = function (streamable_id, callback) {
     var query = { streamable: { $eq: streamable_id } };
     Videolist.findOne(query, callback);
 }
+
+module.exports.delVideoItem = function (var_string_streamable_id, callback) {
+    Videolist.existence(var_string_streamable_id, function (err, gotObj) {
+        console.log(gotObj);
+        if (err) {
+            callback(err);
+        } else if (!gotObj) {
+            callback(-1);
+        } else {
+            Pointerlist_inmod.pushPointerlist(gotObj.index, () => {
+                Videolist.deleteOne({ streamable: var_string_streamable_id }, function (err) {
+                    if (err) {
+                        callback(err);
+                    } else {
+                        callback();
+                    }
+                });
+            });
+        }
+    });
+}

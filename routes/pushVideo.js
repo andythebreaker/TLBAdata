@@ -29,4 +29,14 @@ router.post('/', function (req, res, next) {
   });
 });
 
+router.post('/del', function (req, res, next) {
+  Videolist.delVideoItem(req.body.streamable, function (err) {
+    if (err) {
+      res.send('!error!');
+    } else {
+      res.send('!ok!');
+    }
+  });
+});
+
 module.exports = router;
