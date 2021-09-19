@@ -6,6 +6,8 @@ const mongoDBdataBaseName = "maindb";
 const uri = `mongodb+srv://${mongoDBuserName}:${mongoDBpsw}@cluster0.hg0zi.mongodb.net/${mongoDBdataBaseName}?retryWrites=true&w=majority`;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
+var Pointerlist_inmod = require('./pointer');
+
 //User Schema
 var VideolistSchema = mongoose.Schema({
     index: {
@@ -25,11 +27,13 @@ module.exports.pushVideolist = function (var_string_streamable_id, callback) {
         if (err) {
             callback(err);
         } else if (!gotObj) {
-            var newVideolist = new Videolist({
-                index: 77,
-                streamable: `${var_string_streamable_id}`
+            Pointerlist_inmod.popIndex(function (respopIndex) {
+                var newVideolist = new Videolist({
+                    index: respopIndex || -1,
+                    streamable: `${var_string_streamable_id}`
+                });
+                newVideolist.save(callback);
             });
-            newVideolist.save(callback);
         } else {
             callback();
         }
