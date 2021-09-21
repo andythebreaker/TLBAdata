@@ -44,7 +44,7 @@ module.exports.existence = function (streamable_id, callback) {
     console.log(streamable_id);
     var query = { streamable: { $eq: streamable_id } };
     Videolist.findOne(query, callback);
-}
+};
 
 module.exports.delVideoItem = function (var_string_streamable_id, callback) {
     Videolist.existence(var_string_streamable_id, function (err, gotObj) {
@@ -65,4 +65,14 @@ module.exports.delVideoItem = function (var_string_streamable_id, callback) {
             });
         }
     });
-}
+};
+
+module.exports.count_all_documents_collection = function (callback) {
+    Videolist.countDocuments({}, function (err, count) {
+        if (err) {
+            callback(-1);
+        } else {
+            callback(count);
+        }
+    });
+};
