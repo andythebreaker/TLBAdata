@@ -1,0 +1,2399 @@
+ul.list
+  list-style-type: disc
+
+  li
+    list-style-position: outside
+
+p
+  margin: 1em 0em
+
+  &:first-child
+    margin-top: 0em
+
+  &:last-child
+    margin-bottom: 0em
+
+/*----------------
+ *      Footer
+ *-----------------
+
+#example > .pusher > .footer
+  margin: 0em
+  border-radius: 0em
+  padding: 4em 0em 4em 0em
+
+/*--------------
+ *     Code
+ *---------------
+
+/* Inline Code
+
+pre
+  white-space: pre-wrap
+  white-space: -moz-pre-wrap
+  white-space: -pre-wrap
+  white-space: -o-pre-wrap
+  word-wrap: break-word
+  background-color: #FFFFFF
+  text-align: left
+
+  &.console
+    background-color: transparent
+    line-height: 1.6
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace
+    height: 300px
+    overflow: auto
+    direction: ltr
+
+/*rtl:ignore
+
+code
+  background-color: rgba(0, 0, 0, 0.08)
+  border-radius: 3px
+  display: inline-block
+  font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace
+  font-size: 0.875em
+  font-weight: bold
+  padding: 1px 6px
+  vertical-align: baseline
+
+pre code
+  border: none
+  padding: 0px
+  font-size: 1em
+
+blockquote
+  border-left: 4px solid #777777
+  font-size: 16px
+  line-height: 1.5
+  padding: 0em 2em
+  margin: 1em 0em 2em
+
+  p
+    line-height: inherit
+
+  .author
+    display: block
+    margin: 1em 0em 0em
+    font-weight: bold
+
+/* Code Inside Message
+
+.ui.message >
+  p > code, code
+    background-color: rgba(0, 0, 0, 0.06)
+    line-height: 1
+    padding: 3px 4px
+
+/*--------------
+ *    Docs Icon
+ *---------------
+
+/* Replace Code Icon
+@font-face
+  font-family: 'Docs Code'
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMggi/LYAAAC8AAAAYGNtYXAaVcxXAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5Zl4DICgAAAFwAAAAeGhlYWQCOGXvAAAB6AAAADZoaGVhA6IB5gAAAiAAAAAkaG10eALAAAAAAAJEAAAAFGxvY2EAKABQAAACWAAAAAxtYXhwAAgAEAAAAmQAAAAgbmFtZVcZpu4AAAKEAAABRXBvc3QAAwAAAAADzAAAACAAAwIAAZAABQAAAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmAAHg/+D/4AHgACAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIOYA//3//wAAAAAAIOYA//3//wAB/+MaBAADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAgAAAEABwAGAAAYADQAAAQcXBxc3JyMHFzcnNycBMDBwcDCQkKCQkDBwcDABgDBwcDCgoKCgMHBwMAAAAQAAAAEAAH1wL6hfDzz1AAsCAAAAAADQrRK5AAAAANCtErkAAAAAAcABgAAAAAgAAgAAAAAAAAABAAAB4P/gAAACAAAAAAABwAABAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAEAAAABwAAAAAAAAAAKABQAHgA8AAEAAAAFAA4AAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAOAAAAAQAAAAAAAgAOAEcAAQAAAAAAAwAOACQAAQAAAAAABAAOAFUAAQAAAAAABQAWAA4AAQAAAAAABgAHADIAAQAAAAAACgA0AGMAAwABBAkAAQAOAAAAAwABBAkAAgAOAEcAAwABBAkAAwAOACQAAwABBAkABAAOAFUAAwABBAkABQAWAA4AAwABBAkABgAOADkAAwABBAkACgA0AGMAaQBjAG8AbQBvAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AbgBSAGUAZwB1AGwAYQByAGkAYwBvAG0AbwBvAG4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format("truetype"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAQ4AAsAAAAAA+wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgCCL8tmNtYXAAAAFoAAAATAAAAEwaVcxXZ2FzcAAAAbQAAAAIAAAACAAAABBnbHlmAAABvAAAAHgAAAB4XgMgKGhlYWQAAAI0AAAANgAAADYCOGXvaGhlYQAAAmwAAAAkAAAAJAOiAeZobXR4AAACkAAAABQAAAAUAsAAAGxvY2EAAAKkAAAADAAAAAwAKABQbWF4cAAAArAAAAAgAAAAIAAIABBuYW1lAAAC0AAAAUUAAAFFVxmm7nBvc3QAAAQYAAAAIAAAACAAAwAAAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5gAB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmAP/9//8AAAAAACDmAP/9//8AAf/jGgQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAIAAABAAcABgAAGAA0AAAEHFwcXNycjBxc3JzcnATAwcHAwkJCgkJAwcHAwAYAwcHAwoKCgoDBwcDAAAAEAAAABAAB9cC+oXw889QALAgAAAAAA0K0SuQAAAADQrRK5AAAAAAHAAYAAAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAAcAAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAACgAUAB4APAABAAAABQAOAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIADgBHAAEAAAAAAAMADgAkAAEAAAAAAAQADgBVAAEAAAAAAAUAFgAOAAEAAAAAAAYABwAyAAEAAAAAAAoANABjAAMAAQQJAAEADgAAAAMAAQQJAAIADgBHAAMAAQQJAAMADgAkAAMAAQQJAAQADgBVAAMAAQQJAAUAFgAOAAMAAQQJAAYADgA5AAMAAQQJAAoANABjAGkAYwBvAG0AbwBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG4AUgBlAGcAdQBsAGEAcgBpAGMAbwBtAG8AbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format("woff")
+  font-weight: normal
+  font-style: normal
+
+#example
+  .example i.code.icon:before
+    font-family: 'Docs Code'
+    content: "\e600"
+    vertical-align: top
+
+  .ui.sidebar.menu .item
+    will-change: transform
+
+  .sidebar.menu .logo.image, .ui.menu .logo.image
+    width: 35px
+    margin-right: 1em
+
+  #toc
+    >
+      *
+        will-change: transform
+
+      \:last-child
+        padding-bottom: 2em
+
+      .ui.menu
+        max-height: 100%
+        overflow: auto
+        -webkit-overflow-scrolling: touch
+
+    .item
+      .circular.label
+        position: absolute
+        top: 0.75rem
+        right: 1em
+        opacity: 0.2
+        transition: background 0.3s ease
+
+      &.active > .circular.label, &:hover > .circular.label
+        opacity: 0.8
+
+    .hide.item
+      display: none
+
+    .inverted.header
+      font-size: 1em
+      font-weight: normal
+      color: rgba(255, 255, 255, 0.8)
+      margin-bottom: 0.5em
+
+    a.inverted.header
+      &.active, &:hover
+        color: rgba(255, 255, 255, 1)
+
+    .menu .active.item
+      color: #FFF
+
+  .masthead
+    &.segment
+      position: relative
+      z-index: 3
+      margin: 0em
+      min-height: 185px
+      padding: 3em 0em
+      background-color: #FFFFFF
+      border-bottom: 1px solid #DDDDDD
+      box-shadow: none
+
+    .introduction
+      display: block
+
+      &:after
+        content: "."
+        display: block
+        height: 0
+        clear: both
+        visibility: hidden
+
+    &.segment h1
+      margin: 0em
+
+    iframe
+      &.github
+        width: 101px !important
+
+      margin-left: 5px
+      float: right
+
+    .main.menu
+      margin-top: -2px
+      min-height: 0em
+
+      > .item
+        padding-top: 0.785714em
+        padding-bottom: 0.785714em
+
+  .language.dropdown
+    &.button
+      margin-top: 0.3em
+
+    >
+      .text .description
+        color: rgba(255, 255, 255, 0.4)
+
+      .menu
+        width: 280px
+
+  .tab.masthead.segment
+    display: block
+    padding-bottom: 0em
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset
+
+    .vertical.menu
+      display: none
+      margin: 2rem 0em 1rem
+
+    .tabular.menu
+      margin: 3rem 0px 0em
+      border-bottom: none
+
+      .active.item
+        background-color: #F7F7F7
+
+  .beg.segment
+    background-color: #F9F5F5
+    padding: 2em 3em
+
+    .delete.icon
+      position: absolute
+      top: 1.5em
+      right: 1.5em
+
+    .ui.header
+      margin: 0 !important
+
+  .masthead.segment .download.popup
+    width: 400px
+
+    .check.icon
+      margin-left: -1em
+
+    .framework.grid, .standalone.grid, .integration.grid, .link.grid
+      display: none
+
+  .features
+    list-style-position: inside
+    margin: 10px 0px 0px
+    padding: 0px
+
+    li
+      list-style-type: disc
+      margin: 0px 0px 10px
+      font-weight: bold
+
+  .main.container a.anchor
+    height: 1px
+    position: absolute
+    right: 100%
+    top: -2.5em
+    width: 1px
+
+  .fixed.column
+    position: absolute
+    right: -0.5em
+    top: 0px
+    width: 250px
+    padding-top: 2em
+
+    + .examples
+      margin-right: 280px
+
+  .tab.masthead
+    .item.menu
+      margin: 3rem 0rem 2rem
+
+    &.segment .fixed .tabular.menu
+      position: fixed
+      top: 50px
+
+  .fixed
+    .launch
+      display: none
+
+    &.column .sticky
+      margin-top: 0em
+
+  .main.menu .title.item b
+    margin-right: 0.5em
+
+  .fixed
+    &.main.menu
+      .launch.item
+        display: block
+
+      .search .icon
+        opacity: 0.9
+
+    &.launch.button
+      display: none
+      position: fixed
+      top: 2.5em
+      left: 0px
+      width: 55px
+      height: auto
+      white-space: nowrap
+      overflow: hidden
+      -webkit-transition: 0.3s width ease, 0.5s transform ease
+      -moz-transition: 0.3s width ease, 0.5s transform ease
+      -o-transition: 0.3s width ease, 0.5s transform ease
+      -ms-transition: 0.3s width ease, 0.5s transform ease
+      transition: 0.3s width ease, 0.5s transform ease
+
+  .launch.button .icon
+    margin-left: 0px
+
+  .fixed.launch.button
+    .text
+      position: absolute
+      white-space: nowrap
+      top: auto
+      left: 54px
+      opacity: 0
+      -webkit-transition: 0.3s opacity 0.3s
+      -moz-transition: 0.3s opacity 0.3s
+      -o-transition: 0.3s opacity 0.3s
+      -ms-transition: 0.3s opacity 0.3s
+      transition: 0.3s opacity 0.3s
+
+    &:hover
+      width: 130px
+
+      .text
+        opacity: 1
+
+  &.pushable
+    &.left.overlay .fixed.launch.button
+      transform: translate3d(0, 0, 0)
+
+    &.overlay.left.pushed .fixed.launch.button
+      transform: translate3d(260px, 0, 0)
+
+  &.wide .main.container
+    max-width: 1200px !important
+
+  &.basic
+    .fixed.menu > .container, .main.container, .masthead > .container
+      position: relative
+      width: 700px !important
+      left: 0px
+      margin-right: 4em !important
+
+    .main.container >
+      .rail, .tab > .rail
+        display: none !important
+
+  .main.container
+    .introduction p, .tab > p
+      font-size: 16px
+      line-height: 1.5
+      color: rgba(0, 0, 0, 0.8)
+
+    .example
+      > p
+        font-size: 16px
+        line-height: 1.5
+        color: rgba(0, 0, 0, 0.8)
+
+      >
+        .ignored a, p a
+          display: inline-block
+          position: relative
+          overflow: hidden
+          vertical-align: top
+          z-index: 0
+          -webkit-transition: color 0.2s
+          transition: color 0.2s
+          outline: none
+
+      >
+        .ignored a > code, p a > code
+          background-color: rgba(0, 50, 100, 0.08)
+
+      >
+        .ignored a:before, p a:before
+          position: absolute
+          top: auto
+          bottom: 1px
+          left: 0
+          width: 100%
+          height: 1px
+          background-color: #4183C4
+          content: ''
+          -webkit-transition: all 0.2s
+          -webkit-backface-visibility: hidden
+          transition: all 0.2s
+          backface-visibility: hidden
+          -webkit-transform: scaleX(0)
+          transform: scaleX(0)
+
+    >
+      p
+        font-size: 16px
+        line-height: 1.5
+        color: rgba(0, 0, 0, 0.8)
+
+        a
+          display: inline-block
+          position: relative
+          overflow: hidden
+          vertical-align: top
+          z-index: 0
+          -webkit-transition: color 0.2s
+          transition: color 0.2s
+          outline: none
+
+      .tab > p a
+        display: inline-block
+        position: relative
+        overflow: hidden
+        vertical-align: top
+        z-index: 0
+        -webkit-transition: color 0.2s
+        transition: color 0.2s
+        outline: none
+
+    >
+      p a > code, .tab > p a > code
+        background-color: rgba(0, 50, 100, 0.08)
+
+    >
+      p a:before, .tab > p a:before
+        position: absolute
+        top: auto
+        bottom: 1px
+        left: 0
+        width: 100%
+        height: 1px
+        background-color: #4183C4
+        content: ''
+        -webkit-transition: all 0.2s
+        -webkit-backface-visibility: hidden
+        transition: all 0.2s
+        backface-visibility: hidden
+        -webkit-transform: scaleX(0)
+        transform: scaleX(0)
+
+    .code .value a:before
+      position: absolute
+      top: auto
+      bottom: 1px
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: #4183C4
+      content: ''
+      -webkit-transition: all 0.2s
+      -webkit-backface-visibility: hidden
+      transition: all 0.2s
+      backface-visibility: hidden
+      -webkit-transform: scaleX(0)
+      transform: scaleX(0)
+
+    .example
+      > .ignored a.ui:before
+        display: none
+
+      >
+        .ignored a:hover > code, p a:hover > code
+          background-color: rgba(0, 50, 100, 0.12)
+
+      >
+        .ignored a
+          &:hover:before, &:focus:before
+            background-color: #2C76BF
+            -webkit-transform: scaleX(1)
+            transform: scaleX(1)
+
+        p a
+          &:hover:before, &:focus:before
+            background-color: #2C76BF
+            -webkit-transform: scaleX(1)
+            transform: scaleX(1)
+
+    >
+      p a:hover > code, .tab > p a:hover > code
+        background-color: rgba(0, 50, 100, 0.12)
+
+    >
+      p a
+        &:hover:before, &:focus:before
+          background-color: #2C76BF
+          -webkit-transform: scaleX(1)
+          transform: scaleX(1)
+
+      .tab > p a
+        &:hover:before, &:focus:before
+          background-color: #2C76BF
+          -webkit-transform: scaleX(1)
+          transform: scaleX(1)
+
+    .code .value a:hover:before
+      background-color: #2C76BF
+      -webkit-transform: scaleX(1)
+      transform: scaleX(1)
+
+  .ui.ad
+    max-width: 100%
+
+  &.minimal
+    &.basic
+      > .launch.button
+        display: block
+
+      .full.height >
+        .toc
+          display: none
+
+        .article
+          margin-left: 0px
+
+      .fixed.menu > .container, .main.container, .masthead > .container, .footer > .container
+        position: relative
+        width: 700px !important
+        left: 0px
+        margin-left: auto !important
+        margin-right: auto !important
+
+    > .pusher > .footer
+      padding-left: 0 !important
+      padding-right: 0 !important
+
+  .settings.table
+    margin-bottom: 20px
+
+    td
+      &:first-child
+        font-weight: bold
+
+      &:nth-child(2n)
+        width: 100px
+
+  .segment pre
+    background-color: transparent
+    margin: 0em
+    padding: 0em
+
+    .code
+      margin: 0em
+      padding: 0em
+      max-height: 610px
+      font-weight: normal
+      transform: rotateZ(0deg)
+      -ms-transform: none !important
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace
+
+  table .instructive.segment
+    background-color: transparent
+    border: 0px
+    box-shadow: none
+    padding: 0em
+
+  .ui.label + .instructive.segment
+    margin-top: 0em
+
+  .instructive.segment:after
+    display: none
+
+  .existing.segment em, .instructive.segment em
+    font-style: normal
+    color: rgba(0, 0, 0, 0.4)
+
+  .existing.segment .title + em, .instructive.segment .title + em
+    position: absolute
+    right: 1em
+
+  .label + .code
+    margin-top: 1.5em
+
+  .example
+    margin: 2em 0em
+    padding: 2em 0em
+    position: relative
+    -webkit-tap-highlight-color: transparent
+
+    >
+      .ignored.message, .ignore.message, p
+        max-width: 700px
+
+    &:last-child
+      margin-bottom: none
+
+    > h4:first-child
+      font-size: 18px
+      margin: 0em 0em 0em
+
+    .wireframe.image
+      opacity: 0.5
+
+    .accordion .content > .wireframe.image
+      opacity: 0.5 !important
+
+    \:not(.images) > .wireframe.image
+      margin-top: 1rem
+      margin-bottom: 1rem
+
+      &:first-child
+        margin-top: 0em
+
+      &:last-child
+        margin-bottom: 0em
+
+    .anchor + p
+      margin-top: 0
+      padding-bottom: 1em
+
+  .no.example .anchor + p
+    margin: 0em 0px 1em
+    padding-bottom: 0em
+
+  .example
+    > p
+      color: rgba(0, 0, 0, 0.8)
+
+    .anchor + p + .ignored.message
+      &:not(.attached), + .ignored.message:not(.attached)
+        margin: 0em 0 2em
+
+  .pushing.example .rail .sticky
+    margin: 2em 0em
+
+  .inline.example > .segment > .sticky.fixed
+    background-color: #FFFFFF
+
+    + *
+      margin-top: 39px
+
+  .another.example
+    margin-top: 0em
+    padding-top: 2em
+
+  .spaced.example
+    .buttons, .button
+      margin-bottom: 0.75em
+
+    .buttons .button
+      margin-bottom: 0em
+
+  .example .toggle.button
+    min-width: 100px
+
+  .tab[data-tab*="examples"] .example > p, .examples.tab .example > p
+    margin: 1em 0em
+
+  .tab[data-tab*="examples"] .example .anchor + p, .examples.tab .example .anchor + p
+    padding: 0em
+
+  .intro
+    > h3.ui.header
+      margin-top: 4em
+
+    .example
+      .anchor + p
+        margin-top: 0.5em
+
+      > p
+        color: rgba(0, 0, 0, 0.8)
+
+  .existing.segment:after, .instructive.segment:after, .no.example i.code
+    display: none
+
+  .fixed.example iframe
+    border: none
+    width: 100%
+    height: 350px
+
+  .stretched.example .column img
+    /* This is only necessary for IE which doesnt respect img intrinsic aspect ratios
+    max-height: 225px
+
+  .clear.dropdown .dropdown
+    vertical-align: middle
+
+  .clearing.example
+    overflow: hidden
+    clear: both
+    padding-left: 1px
+    padding-right: 1px
+    padding-bottom: 1px
+
+  .piled.example
+    position: relative
+    z-index: 1
+
+  .main.container:after
+    content: ''
+    display: block
+    height: 0px
+    clear: both
+    visibility: hidden
+
+  .example-group
+    position: relative
+
+  .main.container
+    > .tab
+      position: relative
+
+    .examples
+      > h2
+        position: relative
+        margin: 5rem 0rem 3rem
+
+      > h3
+        position: relative
+        margin: 3rem 0rem 2rem
+
+      > .rail + h2, > h2:first-child
+        margin-top: 0em
+
+    >
+      h2, .tab > h2
+        position: relative
+        margin: 5rem 0rem 3rem
+
+    >
+      h3, .tab > h3
+        position: relative
+        margin: 3rem 0rem 2rem
+
+    >
+      .rail + h2, .tab > .rail + h2
+        margin-top: 0em
+
+    >
+      h2:first-child, .tab > h2:first-child
+        margin-top: 0em
+
+  .example:first-child, h2 + .example, h3 + .example, h4 + .example
+    margin-top: 0px
+
+  .example:first-child i.code, h2 + .example i.code, h3 + .example i.code, h4 + .example i.code
+    top: 0.75em
+
+  .another.example i.code
+    top: -0.5em
+
+  .spaced.example
+    .buttons, .button
+      margin-bottom: 0.75em
+
+    .buttons .button
+      margin-bottom: 0em
+
+  .example
+    .toggle.button
+      min-width: 200px
+
+    .language.label
+      margin: 1em 0em 0.75em
+
+    i.code
+      cursor: pointer
+      position: absolute
+      top: 2rem
+      right: 0rem
+      margin: 0
+      opacity: 0.5
+      font-size: 20px
+      color: #000000
+      -webkit-transition: opacity 0.3s ease-out
+      -moz-transition: opacity 0.3s ease-out
+      -o-transition: opacity 0.3s ease-out
+      -ms-transition: opacity 0.3s ease-out
+      transition: opacity 0.3s ease-out
+
+    &:hover i.code
+      opacity: 0.85
+
+      &:hover
+        opacity: 1
+
+    .grid i.code
+      right: 25%
+
+  .pointing.label + .existing.segment
+    margin-top: 0em
+
+  .existing.code
+    display: none
+
+  .example .annotation
+    margin: 0em
+
+  .annotation pre code
+    min-width: 500px
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+
+  .transition.example .ui.button
+    margin-bottom: 0.5em
+
+  .example
+    >
+      .html
+        padding: 0em
+        transition: box-shadow 0.2s ease, padding 0.2s ease
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0)
+
+        > .top.attached.label
+          -moz-user-select: none
+          -webkit-user-select: none
+          user-select: none
+          display: none
+          background-color: #F8F8F8
+          box-shadow: 0px 0px 0px 1px #DDDDDD
+
+          .copy
+            position: absolute
+            top: 9px
+            right: 8px
+            color: #AAAAAA
+
+            &:hover
+              color: #666666
+
+      .empty.html.segment
+        padding: 1.15em 1em 1em
+
+      .html.segment
+        &:after
+          content: ''
+          display: block
+          height: 0
+          clear: both
+          visibility: hidden
+
+        > .attached.label
+          display: block
+
+          .copy
+            float: right
+
+        padding: 3.5em 1em 1em
+
+    .instructive.segment
+      margin-top: -1px
+
+  .segment > .dimmer
+    z-index: 800
+
+  .code .active.ui.modal
+    display: none !important
+
+  .example
+    .circular.segment
+      width: 175px
+      height: 175px
+
+    .annotation.visible + .icon.buttons
+      margin-top: 1rem
+
+  &.started .tab.segment > .example
+    &:first-child
+      margin-top: 0em
+      padding-top: 0em
+
+    &:last-child
+      margin-bottom: 0em
+      padding-bottom: 0em
+
+  &.theming
+    .main.container .button
+      margin-bottom: 0.4em
+
+    .variable.grid .segment
+      display: block
+      width: 100%
+      height: 500px
+      overflow: auto
+
+  .content.example
+    .ignored.card
+      display: none
+
+    .card .image + .content
+      min-height: 94px
+
+  .colored.example
+    .label, .button
+      margin-bottom: 0.5em
+
+    .menu
+      margin-bottom: 0.5em
+      margin-right: 0.5em
+
+    .attached.label
+      margin-bottom: 0em
+
+  .callback.example .console
+    height: 350px
+    overflow: auto
+
+  .fitted.example .segment
+    line-height: 1
+
+  .highlighted.example
+    .grid
+      position: relative
+
+      &:before
+        position: absolute
+        top: 1rem
+        left: 1rem
+        background-color: #FAFAFA
+        content: ''
+        width: calc(100% - 2rem)
+        height: calc(100% - 2rem)
+        box-shadow: 0px 0px 0px 1px #DDDDDD inset
+
+    .relaxed.grid:before
+      width: calc(100% - 3rem)
+      left: 1.5em
+
+    > .grid + .grid
+      margin-top: 1rem
+
+    .grid .grid:before
+      background-color: #F0F0F0
+
+    .row
+      position: relative
+
+    .grid
+      > .column
+        position: relative
+        z-index: 11
+
+      .column
+        &:not(.row):not(.grid):after
+          background-color: rgba(86, 61, 124, 0.1)
+          -webkit-box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset
+          box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset
+          content: ""
+          display: block
+          min-height: 50px
+
+        &:not(.grid):first-child
+          box-shadow: none
+
+  .ui.type.cards .image .grid .column:not(.grid):first-child
+    box-shadow: none
+
+  .highlighted.example .grid .column:not(.grid), .ui.type.cards .image .grid .column:not(.grid)
+    min-height: 50px
+
+  .highlighted.example .grid .segment, .ui.type.cards .image .grid .segment
+    border-radius: 0px
+    box-shadow: 0 0 0 1px #D4D4D4
+
+  .negative.example > .button
+    position: relative
+    z-index: 100
+    margin: 0px 1px
+
+  .highlighted.special.example .ui.grid
+    > .column
+      &:first-child:after, &:last-child:after
+        display: none
+
+    .grid .column:not(.row):not(.grid):after
+      display: block
+      background-color: rgba(186, 61, 84, 0.1)
+      -webkit-box-shadow: 0 0 0 1px rgba(186, 61, 84, 0.2) inset
+      box-shadow: 0 0 0 1px rgba(186, 61, 84, 0.2) inset
+
+  &.animated .negative.example > .grid
+    margin: -1rem !important
+    background-color: #FFEEEE
+
+  .colored.example .column
+    padding-top: 2em
+    padding-bottom: 2em
+
+  &.animated
+    .highlighted.example .html > .grid, .animated.example .html > .grid, .highlighted.example > .grid, .animated.example > .grid
+      margin: -1rem auto
+      -webkit-animation: grid 7s ease infinite
+      -moz-animation: grid 7s ease infinite
+      animation: grid 7s ease infinite
+
+    .negative.example
+      .html > .grid, > .grid
+        -webkit-animation: none
+        -moz-animation: none
+        -ms-animation: none
+        animation: none
+
+    .highlighted.example .grid .grid, .animated.example .grid .grid
+      -webkit-animation: none
+      -moz-animation: none
+      -ms-animation: none
+      animation: none
+
+  .ui.table .help.icon
+    float: right
+
+  &.site .colors.example .column
+    padding: 50px 0px
+    text-align: center
+    color: #FFFFFF
+    font-weight: bold
+
+  .layered.example
+    z-index: 1
+
+  .demo.container
+    .button.demo >
+      .buttons, .button, .segment > .button
+        margin-bottom: 0.5em
+
+    h4:first-child
+      font-weight: bold !important
+      margin: 0em 0em 1em !important
+      font-size: 18px
+
+    .example:first-child
+      margin-top: 0
+      padding-top: 0
+
+    .segment
+      &.example
+        z-index: 1
+
+      .ui.label
+        margin-bottom: 0em
+
+    > .ui.label:not(.empty)
+      margin-bottom: 1em
+
+/*--------------
+ *     Sidebar
+ *---------------
+
+/* Incomplete Label
+
+/* Hidden Items
+
+/* Sidebar Header
+
+/*--------------
+ *   Page Headers
+ *---------------
+
+/* Align with buttons
+
+/*--------------
+ *    Languages
+ *---------------
+
+/*--------------
+ *    Page Tabs
+ *---------------
+
+/*--------------
+ *    Ad Beg
+ *---------------
+
+/*--------------
+ *    Download
+ *---------------
+
+/* Download Popup
+
+/* lists
+
+/*--------------
+ *  Fixed Columns
+ *---------------
+
+/*--------------
+ *   Fixed Menu
+ *---------------
+
+/*--------------
+ *  Sidebar Button
+ *---------------
+
+/* Position Change
+
+/*******************************
+ *        Alternate Layouts
+ *******************************
+
+/*----------------
+ *   Wide Layout
+ *-----------------
+
+/*----------------
+ *   Basic Layout
+ *-----------------
+
+/* Link Styles
+
+/* Not on UI
+
+/* Hover
+
+/*----------------
+ *   Minimal Layout
+ *-----------------
+
+/* Always Hidden Sidebar
+
+@media only screen and (max-width: 820px)
+  #example.minimal.basic
+    .fixed.menu > .container, .main.container, .masthead > .container, .footer > .container
+      width: auto !important
+      margin-left: 1em !important
+      margin-right: 1em !important
+
+/*----------------
+ *  Settings Table
+ *-----------------
+
+/*----------------
+ *   Code Samples
+ *-----------------
+
+/*----------------
+ *     Examples
+ *-----------------
+
+/* Header
+
+/* Wireframe Image
+
+/* Description
+
+/* Message
+
+/* Another
+
+/* Spaced
+
+/* Examples Tab
+
+/* Intro Tab
+
+/*----------------
+ *  Example Types
+ *-----------------
+
+/* No Example
+
+/* Stretched Example
+
+/* Requires Clear
+
+/* After Section Header
+
+/* Spaced
+
+/* Code Language
+
+/*--------------
+ *   Code Button
+ *---------------
+
+/*#example .example i.code:before {
+/*font-family: 'Docs';
+/*content: "\e600";
+/*}
+
+/* Code Annotation
+
+/* HTML Wrapper
+
+/* Fixes for UI
+
+/*******************************
+ *           UI Pages
+ *******************************
+
+/*----------------
+ *  Getting Started
+ *-----------------
+
+/*----------------
+ *     Theming
+ *-----------------
+
+/*--------------
+ *  Content Loader
+ *---------------
+
+/*--------------
+ *    Colored
+ *---------------
+
+/*--------------
+ *    Callback
+ *---------------
+
+/*--------------
+ *    Fitted
+ *---------------
+
+/*--------------
+ *      Grid
+ *---------------
+
+/* Consecutive
+
+/* Nested Grid Example
+
+/* Animation
+
+/* Grid Inside Grid
+
+@-webkit-keyframes grid
+  0%
+    width: 100%
+
+  45%
+    width: 90%
+
+  55%
+    width: 90%
+
+  100%
+    width: 100%
+
+@-moz-keyframes grid
+  0%
+    width: 100%
+
+  45%
+    width: 90%
+
+  55%
+    width: 90%
+
+  100%
+    width: 100%
+
+@keyframes grid
+  0%
+    width: 100%
+
+  45%
+    width: 90%
+
+  55%
+    width: 90%
+
+  100%
+    width: 100%
+
+/*--------------
+ *      Demo
+ *---------------
+
+/*--------------
+ *    New
+ *---------------
+
+.complex-popup.example
+  #one
+    display: block
+    position: relative
+    padding: 50px 100px
+    background-color: #F0F0F0
+
+  #two
+    display: block
+    background-color: #E2EAE4
+    position: relative
+    top: 10px
+    padding: 50px 8px
+
+/*--------------
+ *   Visibility
+ *---------------
+
+/* static
+
+.visibility.example .overlay
+  padding: 0em
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0)
+  transition: padding 0.5s ease
+  background: transparent
+
+  &.fixed
+    + .placeholder
+      display: none
+      display: block
+      height: 28px
+
+    position: fixed
+    background-color: #FFFFFF
+    padding: 1em
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2)
+    z-index: 10
+
+/* fixed
+
+/* Flash Animation
+
+.main.container .highlight
+  -moz-animation: highlight 2s ease-out
+  -moz-animation-iteration-count: 1
+  -webkit-animation: highlight 2s ease-out
+  -webkit-animation-iteration-count: 1
+  -ms-animation: highlight 2s ease-out
+  -ms-animation-iteration-count: 1
+  animation: highlight 2s ease-out
+  animation-iteration-count: 1
+
+@-webkit-keyframes highlight
+  0%
+    background-color: none
+
+  30%
+    background-color: #ffff00
+
+  100%
+    background-color: none
+
+@-moz-keyframes highlight
+  0%
+    background-color: none
+
+  30%
+    background-color: #ffff00
+
+  100%
+    background-color: none
+
+@-ms-keyframes highlight
+  0%
+    background-color: none
+
+  30%
+    background-color: #ffff00
+
+  100%
+    background-color: none
+
+/*--------------
+ *   Progress
+ *---------------
+
+body.progress.animated .ui.progress .bar
+  -webkit-animation: finish 10s ease-in-out infinite
+  -moz-animation: finish 10s ease-in-out infinite
+  -ms-animation: finish 10s ease-in-out infinite
+  animation: finish 10s ease-in-out infinite
+
+/*--------------
+ *    Divider
+ *---------------
+
+#example
+  &.divider .ui.grid
+    position: relative
+
+  &.header .wireframe.image
+    max-width: 500px
+
+  &.modal-page .main.container
+    z-index: auto
+
+  &.popup .inline.example .popup
+    color: #FF0000
+
+  .position.example
+    .icon
+      position: absolute
+      margin: 0em
+      width: auto
+      font-size: 1.5em
+      height: auto
+      padding: 0.5em !important
+
+    .segment
+      &:not(.instructive)
+        width: 250px
+        height: 250px
+
+      .icon
+        &:nth-of-type(1)
+          top: 0em
+          left: 0em
+
+        &:nth-of-type(2)
+          top: 0em
+          left: 50%
+          margin-left: -1em
+
+        &:nth-of-type(3)
+          top: 0em
+          right: 0em
+
+        &:nth-of-type(4)
+          top: 50%
+          margin-top: -1em
+          right: 0em
+
+        &:nth-of-type(5)
+          bottom: 0em
+          right: 0em
+
+        &:nth-of-type(6)
+          bottom: 0em
+          left: 50%
+          margin-left: -1em
+
+        &:nth-of-type(7)
+          bottom: 0em
+          left: 0em
+
+        &:nth-of-type(8)
+          top: 50%
+          margin-top: -1em
+          left: 0em
+
+  .main.ui.grid
+    position: relative
+
+  iconSearch
+    &.ui.search
+      float: right
+      position: relative
+      z-index: 3
+
+    .result i.icon
+      font-size: 20px
+      float: right
+      margin-top: -5px
+      margin-left: 11px
+      color: #000000
+
+  .icon.example
+    .grid
+      text-align: left
+
+      .code
+        position: static
+
+      > .column
+        opacity: 0.8
+        text-align: center
+        color: transparent
+        -moz-align-items: center
+        -ms-align-items: center
+        align-items: center
+        -webkit-transition: color 0.3s ease, opacity 0.3s ease
+        -moz-transition: color 0.3s ease, opacity 0.3s ease
+        -o-transition: color 0.3s ease, opacity 0.3s ease
+        -ms-transition: color 0.3s ease, opacity 0.3s ease
+        transition: color 0.3s ease, opacity 0.3s ease
+
+    .attached.segment .grid > .row > .column
+      color: #555555
+
+    .column .icon
+      opacity: 1
+      height: 1em
+      color: #333333
+      display: block
+      margin: 0em auto 0.25em
+      font-size: 2em
+      -webkit-transition: color 0.6s ease, transform 0.2s ease
+      -moz-transition: color 0.6s ease, transform 0.2s ease
+      -o-transition: color 0.6s ease, transform 0.2s ease
+      -ms-transition: color 0.6s ease, transform 0.2s ease
+      transition: color 0.6s ease, transform 0.2s ease
+
+    .html.segment .grid .column
+      color: #777777
+
+    .grid
+      &:hover .column
+        color: #777777
+
+        .icon
+          color: #333333
+
+      .column:hover
+        .icon
+          color: #000000
+          -webkit-transform: scale(1.5)
+          -moz-transform: scale(1.5)
+          -o-transform: scale(1.5)
+          -ms-transform: scale(1.5)
+          transform: scale(1.5)
+
+        opacity: 1
+        color: #444444
+
+  .another
+    &.icon.example
+      border-top: 1px solid rgba(0, 0, 0, 0.1)
+
+    &.example i.code ~ .ignored.message
+      margin: 0em 0em 2em
+
+  .element.cards .image
+    overflow: hidden
+    min-height: 100px
+
+  .collection.cards
+    min-height: 350px
+
+  .ui.type.cards > .item
+    min-height: 255px
+
+    > .image
+      padding: 1em
+      height: 165px
+      vertical-align: middle
+
+  &.header .sizer
+    padding: 1rem 0em
+
+  &.flag .basic.table tbody td:first-child
+    width: 20px
+
+  &.feed .example .segment
+    max-width: 800px
+
+/*--------------
+ *      Header
+ *---------------
+
+/*--------------
+ *      Modal
+ *---------------
+
+/*--------------
+ *      Popup
+ *---------------
+
+/*--------------
+ *      Icon
+ *---------------
+
+/*--------------
+ *    List Page
+ *---------------
+
+/*--------------
+ *      Header
+ *---------------
+
+/*--------------
+ *      Flag
+ *---------------
+
+/*--------------
+ *      Feed
+ *---------------
+
+/*--------------
+ *      Search
+ *---------------
+
+.fixed.menu .right.searching.menu
+  .borderless.item, .popup.item, .language.item
+    display: none
+
+#search
+  input
+    color: white
+    width: 146px
+    text-align: right
+
+  &.hidden input
+    padding: 0 0.8em 0 0 !important
+    width: 0
+
+  .results
+    margin-top: 1em
+    border-radius: 0px 0px 3px 3px
+
+  &.ui.input input
+    &::-webkit-input-placeholder, &::-moz-placeholder
+      color: rgba(255, 255, 255, 0.75)
+
+#shortcuts.ui.modal .actions
+  padding: 0
+  border: none
+  background: none
+
+/*******************************
+ *         Code Samples
+ *******************************
+
+code
+  &.code
+    display: block
+    overflow-x: auto
+    padding: 0em
+    color: #666
+    background-color: transparent
+    -webkit-text-size-adjust: none
+    -moz-transition: 0.5s color ease
+    -webkit-transition: 0.5s color ease
+    -ms-transition: 0.5s color ease
+    transition: 0.5s color ease
+
+    span
+      -moz-transition: 0.5s color ease
+      -webkit-transition: 0.5s color ease
+      -ms-transition: 0.5s color ease
+      transition: 0.5s color ease
+
+    color: #333333
+
+    &.xml
+      color: #555555
+
+      &:hover
+        color: #333333
+
+  .string, .tag .value, .phpdoc, .dartdoc, .tex .formula
+    color: #008C79
+
+  &:hover
+    .string, .tag .value, .phpdoc, .dartdoc, .tex .formula
+      color: #007b6b
+
+  .comment, .template_comment, .diff .header, .javadoc
+    color: #AAAAAA
+    font-style: italic
+
+  .tag, .rules .property, .django .tag .keyword
+    color: #858188
+    font-weight: normal
+
+  &:hover
+    .tag, .rules .property, .django .tag .keyword
+      color: #892A6F
+      font-weight: normal
+
+  .tag .title
+    color: #858188
+    font-weight: normal
+
+  &:hover .tag .title
+    color: #892A6F
+
+  .attribute, .variable, .lisp .body
+    color: #8D8A8A
+    transition: color 0.3s
+
+  &:hover
+    .attribute, .variable, .lisp .body
+      color: #934E4E
+
+  .title, .id, .scss .preprocessor
+    color: #9C989F
+    font-weight: bold
+
+  .rule .attribute, &:hover .rule .attribute
+    color: #892A6F
+
+  .number, .hexcolor, .ruby .constant
+    color: #666666
+
+  &:hover
+    .number, .hexcolor, .ruby .constant
+      color: #333333
+
+  &.less
+    .number, .hexcolor, .ruby .constant
+      color: #005FAA
+
+    &:hover
+      .number, .hexcolor, .ruby .constant
+        color: #005FAA
+
+    .attribute, .variable, .lisp .body
+      color: #333333
+      transition: color 0.3s
+
+    &:hover
+      .attribute, .variable, .lisp .body
+        color: #333333
+
+  &.code .class
+    color: #008C79
+
+    b
+      font-weight: normal
+      background-color: rgba(90, 90, 90, 0)
+      border-radius: 5px
+      line-height: 1
+      vertical-align: baseline
+      display: inline-block
+      -webkit-transition: all 0.3s ease
+      transition: all 0.3s ease
+      margin: 0px -4px
+      padding: 1px 4px
+      background-color: rgba(218, 189, 40, 0.15)
+      color: #9E6C00
+
+  .tag .value a
+    position: relative
+    border-radius: 5px
+    line-height: 1
+    color: inherit
+    margin: 0px -2px
+    padding: 1px 4px
+    background-color: rgba(150, 150, 150, 0.1)
+    -webkit-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+    b
+      border-radius: 0px
+
+    &:hover
+      background-color: rgba(40, 150, 218, 0.2)
+      color: #00689E
+
+      b
+        background-color: transparent
+        color: inherit
+
+  .keyword, .css .rule .keyword, .winutils, .javascript .title, .nginx .title, .subst, .request, .status
+    color: #333
+    font-weight: bold
+
+  .javascript .title, .list .keyword, .subst
+    font-weight: normal
+
+  .class .title, .type, .vhdl .literal, .tex .command
+    color: #458
+    font-weight: bold
+
+  .regexp
+    color: #009926
+
+  .built_in
+    color: #0086b3
+
+  .preprocessor, .pragma, .pi, .doctype, .shebang, .cdata
+    color: #999
+    font-weight: bold
+
+  .deletion
+    background: #fdd
+
+  .addition
+    background: #dfd
+
+  .diff .change
+    background: #0086b3
+
+  .chunk
+    color: #aaa
+
+/*--------------
+ *   Hover Only
+ *---------------
+
+/* Class Name
+
+/* Comment
+
+/* Properties
+
+/* HTML Tag
+
+/* Attribute
+
+/* CSS ID
+
+/* CSS Attribute
+
+/* CSS Value
+
+/* LESS
+
+/* LESS Variable
+
+/* Emphasized Value
+
+/*
+ *code.code:hover .class.string b,
+ *code.code:hover .class.value b {
+ *  background-color: rgba(218, 189, 40, 0.1);
+ *  color: inherit;
+ *}
+
+/* Linked UI
+
+/*--------------
+ *      Normal
+ *---------------
+
+/*******************************
+ *         Sidebar Layout
+ *******************************
+
+#example
+  > .pusher > .full.height
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+
+  &:not(.site) > .pusher > .full.height
+    background-color: #FFFFFF
+
+  .full.height > .toc
+    position: fixed
+    z-index: 1
+    background-color: #1b1c1d
+    width: 250px
+    -webkit-box-flex: 0
+    -webkit-flex: 0 0 auto
+    -ms-flex: 0 0 auto
+    flex: 0 0 auto
+
+    .ui.menu
+      border-radius: 0
+      border-width: 0 1px 0 0
+      box-shadow: none
+      margin: 0
+      width: inherit
+      overflow: hidden
+      will-change: transform
+      max-height: 100vh
+      overflow: auto
+      -webkit-overflow-scrolling: touch
+
+  .article
+    -webkit-box-flex: 1
+    -webkit-flex: 1 1 auto
+    -ms-flex: 1 1 auto
+    flex: 1 1 auto
+    min-width: 0px
+    margin-left: 250px
+
+  .full.height > .toc .ui.menu
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+
+    &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb
+      background-color: rgba(255, 255, 255, 0)
+
+    &:hover
+      &::-webkit-scrollbar-track
+        background-color: rgba(255, 255, 255, 0.1)
+
+      &::-webkit-scrollbar-thumb
+        background-color: rgba(255, 255, 255, 0.25)
+
+  > .pusher > .footer, .article > .footer
+    border-top: 1px solid #DDDDDD
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08) inset
+    background-color: #FAFAFA
+    padding-top: 2em
+
+  > .pusher > .footer
+    clear: both
+
+  .fixed.menu > .container, .main.container, .masthead > .container, .footer > .container
+    position: relative
+
+  .main.container
+    padding: 2em 0em 7em
+
+  .wide.main.container
+    width: 80%
+    margin: 0 auto
+    max-width: 1140px
+
+  .main.container >
+    .right.rail .sticky
+      padding-bottom: 2em
+
+    .tab >
+      .examples > .right.rail .sticky, .right.rail .sticky
+        padding-bottom: 2em
+
+  .following.menu .menu .active.item
+    font-weight: bold
+
+  .masthead .advertisement
+    width: 285px
+    height: 130px
+
+    #carbonads
+      width: 100%
+      height: 130px
+
+  .advertisement
+    #carbonads
+      position: relative
+      display: block
+      margin: 0 auto
+      background-color: #F5F5F5
+      border: 1px solid #CCCCCC
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08) inset
+      padding: 1em
+      font-family: "Helvetica Neue", Arial, sans-serif
+      overflow: hidden
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
+      border-radius: 5px
+
+      &:hover
+        background-color: #F0F8F9
+        border: 1px solid #87C7D0
+
+    .carbon-wrap
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+
+    .carbon-img
+      width: 130px
+      margin-right: 0.75em
+      -webkit-box-flex: 1
+      -webkit-flex: 1 0 auto
+      -ms-flex: 1 0 auto
+      flex: 1 0 auto
+
+      img
+        display: block
+        border: 1px solid #DDDDDD
+
+    .carbon-text
+      font-size: 13px
+      line-height: 16px
+      padding-bottom: 1.5em
+      height: auto
+      min-width: 145px
+      color: rgba(20, 50, 50, 0.8)
+
+      &:hover
+        color: rgba(0, 30, 30, 0.8)
+
+  .carbon-poweredby
+    position: absolute
+    left: 130px
+    margin-left: 2em
+    bottom: 1em
+    color: #bbb
+    font-size: 11px
+    color: rgba(0, 0, 0, 0.3)
+    text-align: left
+
+  .rail .advertisement
+    display: block
+    float: none
+    margin: 1em 0
+    padding-left: 0
+
+    #carbonads
+      display: block
+      margin: 0 -1.5em
+      width: auto
+
+/* page layout
+
+/*******************************
+ *      Definition Container
+ *******************************
+
+/*******************************
+ *           Advert
+ *******************************
+
+/*----------------
+ *  Style Overrides
+ *-----------------
+
+/*******************************
+ *        Advertisements
+ *******************************
+
+/* Rail Ad
+
+#semantic-sponsor
+  position: relative
+  z-index: 3
+  margin-top: -1px
+  min-height: 40px
+  border-top: solid 1px #dddddd
+  border-bottom: solid 1px #dddddd
+
+  &:hover
+    border-color: #87C7D0
+
+.native-link
+  display: block
+  width: 100%
+  background-color: #F5F5F5
+  padding: 5px 3em
+  color: #415a5a
+
+  &:hover
+    color: #000000
+    background-color: #F0F8F9
+
+  text-decoration: none
+
+.native-ad
+  text-decoration: none
+  position: absolute
+  right: 1rem
+
+.native-inline, .native-link
+  display: flex
+  align-items: center
+
+.native-img
+  margin-right: 10px
+  display: block
+  padding: 5px
+  height: 30px
+  flex: 0 0 auto
+  width: 30px
+  border-radius: 50%
+
+.native-text
+  margin-right: 38px
+
+.native-ad
+  padding: 4px 7px 4px
+  line-height: 1
+  border-radius: 3px
+  background-color: #848484
+  color: #fff
+  font-size: 10px
+
+  &:hover
+    color: #fff
+
+/*******************************
+ *          Responsive
+ *******************************
+
+/* Defaults
+
+#example
+  .masthead > .container, .main.container, .fixed.menu > .container
+    margin-left: 3em !important
+    margin-right: 3em !important
+    width: auto !important
+    max-width: 960px !important
+
+  .masthead > .container
+    margin-right: 387px !important
+
+  .main.container
+    margin-right: 387px !important
+
+    >
+      .right.rail
+        margin-left: 3em
+        padding-top: 2em
+        width: 319px
+
+      .tab >
+        .examples > .right.rail, .right.rail
+          margin-left: 3em
+          padding-top: 2em
+          width: 319px
+
+  .masthead
+    .advertisement
+      margin-left: 3em
+      padding: 0em 1.25em
+      width: 342px
+
+    .introduction
+      display: block
+
+    .advertisement
+      position: absolute
+      left: 100%
+      bottom: -2px
+
+/* Rail Default
+
+/* Absolute Ad
+
+/* Remove Overview from pages with Examples
+@media only screen and (max-width: 1500px)
+  #example .fixed.column
+    right: auto
+    left: 100%
+    margin-left: 4.5em
+    width: 300px
+
+    + .examples
+      margin-right: 0px
+
+      .right.rail
+        display: none
+
+/* Table Ad
+@media only screen and (max-width: 1272px)
+  #example
+    .masthead
+      > .container
+        &:first-child
+          display: flex
+          flex-direction: row
+
+        margin-right: 2em !important
+        max-width: none !important
+
+      .introduction
+        vertical-align: top
+        flex: 1 0 auto
+
+      .advertisement
+        position: static
+        float: none
+        flex: 0 1 auto
+        vertical-align: bottom
+        padding-left: 0em
+        margin-left: 2rem
+        margin-top: -0.5rem
+        padding-right: 0em
+
+    .bsa-cpc ._default_
+      margin-right: 0px
+
+/* Squish Content (Just For Small Computers)
+@media only screen and (max-width: 1272px)
+  /* Resize TOC
+
+  #example
+    .full.height > .toc
+      width: 200px
+
+    .article
+      margin-left: 200px
+
+    .masthead > .container, .main.container, .fixed.menu > .container
+      margin-left: 2rem !important
+      margin-right: 2rem !important
+
+    .main.container
+      margin-right: 318px !important
+
+  /* Resize Main Container
+
+  .native-link
+    padding-left: 2rem
+    padding-right: 2rem
+
+  .native-ad
+    right: 2rem
+
+  /* Resize Rail
+
+  #example
+    .main.container >
+      .right.rail
+        padding-left: 1.5em
+        width: 260px
+
+      .tab >
+        .examples > .right.rail, .right.rail
+          padding-left: 1.5em
+          width: 260px
+
+    .fixed.column
+      width: 250px
+      margin-left: 2.5em
+
+/* Hide Top Bar
+@media only screen and (min-width: 1145px)
+  #example .fixed.main.menu
+    display: none
+
+/* Remove Fixed Sidebar /  Show Top Bar
+@media only screen and (max-width: 1144px)
+  /* Hide Fixed Sidebar
+
+  #example
+    .full.height >
+      .toc
+        display: none
+
+      .article
+        margin-left: 0px
+
+    .fixed.launch.button
+      display: none !important
+
+    .masthead
+      &.segment
+        padding-top: 5em
+
+      iframe
+        display: none
+
+      > .container
+        margin-left: 2em !important
+
+    .main.container, .fixed.menu > .container
+      margin-left: 2em !important
+
+    .main.container >
+      .right.rail .sticky
+        padding-top: 2.5em
+
+      .tab >
+        .examples > .right.rail .sticky, .right.rail .sticky
+          padding-top: 2.5em
+
+    .fixed.menu > .container
+      margin-left: 0em !important
+      margin-right: 0em !important
+      width: 100% !important
+      max-width: none !important
+
+    .main.menu .bug.item
+      display: none
+
+    .fixed.column .sticky
+      padding-top: 2em
+
+  /* Hide Fixed Launch Button
+
+  /* Additional Padding for Fixed Menu
+
+  /* Hide GitHub Stars in Intro
+
+  /* Less Left Padding
+
+  /* Padding Above Rail
+
+  /* 100% Menu Width
+
+  /* Remove Bug Reports
+
+  /*      Hide Music *]/
+   *   #example .main.menu .music.item {
+   *     display: none;
+   *   }
+   * 
+   *   /* Space For Header Over Examples
+
+/* Remove Rail
+@media only screen and (max-width: 992px)
+  /* Remove Rail
+
+  #example
+    .main.container >
+      .right.rail
+        display: none
+
+      .tab >
+        .examples > .right.rail, .right.rail
+          display: none
+
+    .masthead > .container, .main.container
+      margin-left: 1em !important
+      margin-right: 1em !important
+      max-width: none !important
+
+    .fixed.menu > .container
+      margin-left: 1em !important
+      margin-right: 1em !important
+      max-width: none !important
+      margin-left: 0em !important
+      margin-right: 0em !important
+      width: 100% !important
+      max-width: none !important
+
+    .masthead .advertisement
+      padding-right: 0em !important
+
+  /* Fluid Containers
+
+  /* Still 100% Fixed Menu
+
+  /* Remove Padding on Ad
+
+@media only screen and (max-width: 820px)
+  /* Ad Takes Full Width
+
+  #example .masthead
+    .introduction
+      display: block
+
+    .advertisement
+      display: block
+      float: none
+      margin: 2em 0em 0em
+      padding-left: 0em
+      width: auto
+
+      #carbonads > span
+        position: relative
+        display: block
+        max-width: 300px
+
+@media only screen and (max-width: 768px)
+  #example
+    .masthead
+      > .container:first-child
+        flex-direction: column
+
+      .advertisement
+        #carbonads
+          height: auto
+
+        height: auto
+        margin: 1rem 0rem
+
+    .fixed.menu > .container > .section.item
+      display: none
+
+    .masthead.segment
+      padding-bottom: 0em
+
+    &.button-page .example
+      > .button, .html > .button
+        margin-bottom: 8px
+
+    .stackable.grid .ui.vertical.divider
+      display: none
+
+  /* Hide Some Fixed Menu Content (Pagination, Search)
+
+  /* Add Sticky Footers
+
+  body.pushable > .pusher
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+
+    > .full.height
+      -webkit-box-flex: 1
+      -webkit-flex: 1 0 auto
+      -ms-flex: 1 0 auto
+      flex: 1 0 auto
+
+  /* Ad Label
+
+  #example
+    .bsa-cpc ._default_
+      padding-left: 1em
+      padding-right: 1em
+
+    .masthead
+      .button
+        margin-bottom: 0.75em
+
+      .main.menu
+        display: none
+
+        + .main.menu
+          display: -webkit-box
+          display: -webkit-flex
+          display: -ms-flexbox
+          display: flex
+
+      .download.button
+        display: none
+
+    .pusher > .footer .grid .three.column
+      display: none !important
+
+  /* Let Buttons Vertically Stack
+
+  /* No Download Button
+
+  /* Hide Sitemap
+
+/* Small Phone
+@media only screen and (max-width: 500px)
+  /* Stack Advert
+
+  #example
+    .masthead .advertisement #carbonads > span
+      max-width: none
+
+    .advertisement .carbon-wrap
+      -webkit-flex-direction: column-reverse
+      -ms-flex-direction: column-reverse
+      flex-direction: column-reverse
+      text-align: center
+      align-items: center
+
+    .carbon-poweredby
+      display: none
